@@ -1,0 +1,13 @@
+set nocompatible              " 去除VI一致性,必须
+filetype off                  " 必须
+set nu!                       " 显示行号
+syntax on                     " 语法高亮度显示
+set autoindent                " vim使用自动对齐，也就是把当前行的对齐格式应用到下一行(自动缩进）
+set cindent                   "（cindent是特别针对 C语言语法自动缩进）
+set smartindent               " 依据上面的对齐格式，智能的选择对齐方式，对于类似C语言编写上有用
+set tabstop=4                 " 设置tab键为4个空格，
+set shiftwidth =4             " 设置当行之间交错时使用4个空格
+set ai!                       " 设置自动缩进
+set showmatch                 " 设置匹配模式，类似当输入一个左括号时会匹配相应的右括号
+set ruler                     " 在编辑过程中，在右下角显示光标位置的状态行
+
