@@ -55,7 +55,10 @@ let g:ycm_key_invoke_completion = '<M-;>'
 " 设置转到定义处的快捷键为ALT + G，这个功能非常赞
 nmap <M-g> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR>
 " 设置按哪个键上屏
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>ga :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 Plugin 'scrooloose/nerdtree'
 " 这个插件可以显示文件的Git增删状态
@@ -71,11 +74,28 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$', 'node_modules'] "ignore files in NERDTree
 " 不显示项目树上额外的信息，例如帮助、提示什么的
 let NERDTreeMinimalUI=1
+let NERDTreeWinPos="left"
 
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$'}
+
+" 缩进对齐线
+Plugin 'nathanaelkane/vim-indent-guides'
+" vim启用时默认启用
+let g:indent_guides_enable_on_vim_startup = 1 "添加行，vim启动时启用
+let g:indent_guides_start_level = 1           "添加行，开始显示对齐线的缩进级别
+let g:indent_guides_guide_size = 1            "添加行，对齐线的宽度，（1字符）
+let g:indent_guides_tab_guides = 0            "添加行，对tab对齐的禁用
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
+" 代码折叠
+Plugin 'tmhedberg/SimpylFold'
+set foldmethod=indent
+au BufWinLeave * silent mkview  " 保存文件的折叠状态
+au BufRead * silent loadview    " 恢复文件的折叠状态
+nnoremap <space> za             " 用空格来切换折叠状态
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
