@@ -1,24 +1,27 @@
 [submodule "bundle/L9"]
 	path = bundle/L9
-	url = https://github.com/vim-scripts/L9.git
+	url = git@github.com:vim-scripts/L9.git
+[submodule "bundle/SimpylFold"]
+	path = bundle/SimpylFold
+	url = git@github.com:tmhedberg/SimpylFold.git
 [submodule "bundle/Vundle.vim"]
 	path = bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git
+	url = git@github.com:VundleVim/Vundle.vim.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+	url = git@github.com:Valloric/YouCompleteMe.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
-	url = git://git.wincent.com/command-t.git
+	url = git@github.com:wincent/command-t.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+	url = git@github.com:scrooloose/nerdtree.git
 [submodule "bundle/nerdtree-git-plugin"]
 	path = bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
-	url = https://github.com/rstacruz/sparkup.git
+	url = git@github.com:rstacruz/sparkup.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+	url = git@github.com:tpope/vim-fugitive.git
